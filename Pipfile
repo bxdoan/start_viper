@@ -1,0 +1,32 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+psycopg2-binary = "*"
+vyper="*"
+eth-tester="*"
+lark="*"
+web3="*"
+# testing
+pytest = "*" # required fix version once, now can go w/ the latest
+pytest-cov = "*"  # run pytest coverage
+pytest-xdist = "*"  # run pytest parallel
+pytest-rerunfailures = "*"  # reruns failed tests
+pytest-instafail="*"
+pytest-split="*"
+mock = "*"
+testfixtures = "*"
+pytest-ordering = "*"
+pytest-forked = "*"
+flake8 = ">=3.8.3"
+pytest-factoryboy = "*"
+forex_python = "*"
+requests = "*"
+
+
+[requires]
+python_version = "3.9"
