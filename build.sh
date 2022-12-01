@@ -18,6 +18,7 @@ function _() {
     fi
     # make sure path dump json exit
     mkdir -p "$SH/out"
+
     input_file="$SH/contract/$file_name.vy"
     dump_file="$SH/out/$file_name.json"
     PYTHONPATH=`pwd` $pipenv run vyper -p "$SH" -f combined_json "$input_file" | jq > "$dump_file"

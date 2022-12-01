@@ -9,8 +9,11 @@ verify_ssl = true
 psycopg2-binary = "*"
 vyper="*"
 eth-tester="*"
+web3="==5.27.0"
+py-evm="*"
+tox="*"
 lark="*"
-web3="*"
+hypothesis="*"
 # testing
 pytest = "*" # required fix version once, now can go w/ the latest
 pytest-cov = "*"  # run pytest coverage
