@@ -17,10 +17,10 @@ function _() {
       file_name='simple_open_auction'  # default file name
     fi
     # make sure path dump json exit
-    mkdir -p "$SH/out"
+    mkdir -p "$SH/gen"
 
     input_file="$SH/contract/$file_name.vy"
-    dump_file="$SH/out/$file_name.json"
+    dump_file="$SH/gen/$file_name.json"
     PYTHONPATH=`pwd` $pipenv run vyper -p "$SH" -f combined_json "$input_file" | jq > "$dump_file"
     #                                    root      format json   input file         dump output
 
