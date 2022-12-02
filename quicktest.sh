@@ -10,7 +10,7 @@ function _() {
     else
       [ -x pipenv ] && pipenv='pipenv' || pipenv="$HOME/.pyenv/shims/pipenv"
     fi
-
-    PYTHONPATH=`pwd` $pipenv run pytest  -p no:warnings  --tb=short --lf   2>&1 | tee "$SH/$(basename $BASH_SOURCE).log"
+    tee_log="$SH/out/$(basename $BASH_SOURCE).log"
+    PYTHONPATH=`pwd` $pipenv run pytest  -p no:warnings  --tb=short --lf   2>&1 | tee $tee_log
 }
   eval _

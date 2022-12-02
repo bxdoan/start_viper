@@ -3,7 +3,7 @@
 function _() {
     local SH=$(cd `dirname $BASH_SOURCE` && pwd)
     local AH=$(cd "$SH/.." && pwd)
-    cd $AH
+    cd $SH
     # prepare :pipenv binary
     if [[ $OSTYPE == 'darwin'* ]]; then
       pipenv="pipenv"
