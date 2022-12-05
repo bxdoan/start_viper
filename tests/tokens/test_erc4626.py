@@ -1,11 +1,11 @@
 import pytest
-
 from start_viper.config import HOME_DIR
 
-AMOUNT = 100 * 10 ** 18
-TOKEN_NAME = "Vypercoin"
-TOKEN_SYMBOL = "FANG"
-TOKEN_DECIMALS = 18
+
+AMOUNT = 100 * 10 ** 18  # 100 tokens
+TOKEN_NAME = "DXDOAN"
+TOKEN_SYMBOL = "BXD"
+TOKEN_DECIMALS = 18  # 18 decimals is the most common
 TOKEN_INITIAL_SUPPLY = 0
 
 
@@ -24,7 +24,9 @@ def vault(get_contract, token):
 
 
 def test_asset(vault, token):
-    assert vault.asset() == token.address
+    vault_asset = vault.asset()
+    token_address = token.address
+    assert vault_asset == token_address
 
 
 def test_max_methods(w3, vault):
