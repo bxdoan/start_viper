@@ -24,20 +24,3 @@ jobs:
     - name: Test with pytest
       run: |
         pytest --alluredir=allure-results --broswer remote
-    - name: Allure Report
-      uses: simple-elf/allure-report-action@main
-      if: always()
-      id: allure-report
-      with:
-        allure-results: allure-results
-        allure-report: allure-report
-        allure-report-version: 2.13.8
-        gh-pages-branch: gh-pages
-        allure-history: allure-history
-    - name: Deploy report to GitHub Pages
-      if: always()
-      uses: peaceiris/actions-gh-pages@v3
-      env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./allure-report
