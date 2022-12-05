@@ -1,5 +1,5 @@
 # start_viper
-[![Build Status]](https://github.com/bxdoan/start_viper/actions/workflows/main.yml/badge.svg)
+[![Build Status](https://github.com/bxdoan/start_viper/actions/workflows/main.yml/badge.svg)](https://github.com/bxdoan/start_viper/actions/workflows/main.yml/badge.svg)
 
 all code in this repo is for learning vyper framework only, not for production
 
